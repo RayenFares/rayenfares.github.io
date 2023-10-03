@@ -27,6 +27,3 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 ## Enable compression ##
-
-# Set "landing-2.html" as the default landing page
-DirectoryIndex landing-page-2.html
