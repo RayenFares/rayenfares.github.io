@@ -29,4 +29,4 @@ AddOutputFilterByType DEFLATE application/x-javascript
 ## Enable compression ##
 
 # Set "landing-2.html" as the default landing page
-DirectoryIndex landing-2.html
+DirectoryIndex landing-page-2.html
