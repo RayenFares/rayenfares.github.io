@@ -13,6 +13,13 @@
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Open Graph meta tags for Facebook sharing -->
+		<meta property="og:url" content="https://rayenfares.github.io/single-project-stega.html">
+		<meta property="og:type" content="https://rayenfares.github.io/">
+		<meta property="og:title" content="Image Steganography">
+		<meta property="og:description" content="Steganography is the practice of concealing secret information within another medium to prevent unauthorized access.">
+		<meta property="og:image" content="assets/vids/stegax.jpg">
 
 		<!-- Favicon (http://www.favicon-generator.org/) -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -77,7 +84,7 @@
 
 			<!-- Begin noise background -->
 			<div class="bg-noise"></div>
-			<!-- End noise background --> 
+			<!-- End noise background -->
 
 
 			<!-- *****************************************
@@ -101,7 +108,7 @@
 								<a href="index.html">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
 									<img src="assets/img/lg-white.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
-									<img src="assets/img/lg-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+									<!--<img src="assets/img/lg-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -214,9 +221,12 @@
 					
 					<!-- ========================
 					///// Begin page header /////
+					=============================
+					* ATENTION: This page header is slightly different from the default page header! 
+					It contains some extra elements and classes specifically for a portfolio single project.
 					============================= 
 					* Use class "ph-full" to enable fullscreen size.
-					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
+					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).).
 					* Use class "ph-center" to enable content center position.
 					* Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
 					* Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
@@ -225,20 +235,68 @@
 					* Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
 					* Use class "ph-content-parallax" to enable content parallax.
 					* Use class "ph-stroke" to enable caption title stroke style.
+					* Use class "ph-inline" to enable content inline position (for a single project page only! No effect with class "ph-center"!).
 					-->
-					<div id="page-header" class="ph-full ph-cap-xxlg ph-center ph-image-cropped ph-image-cover-2 ph-content-parallax">
+					<div id="page-header" class="ph-full ph-bg-image ph-image-shadow ph-image-cover-5 ph-content-parallax">
 						<div class="page-header-inner tt-wrap">
+
+							<!-- Begin page header image 
+							============================= -->
+							<div class="ph-image">
+								<div class="ph-image-inner">
+									<!-- <img src="assets/img/page-header/project-ph/project-ph-2.jpg" alt="Image"> -->
+
+									<div class="ph-video-wrap">
+										<video class="ph-video" loop muted autoplay preload="metadata" poster="assets/vids/stegax.jpg">
+											<!-- <source src="assets/vids/AMAinsights.mp4" type="video/mp4"> -->
+											<!-- <source src="assets/vids/TimeSnap.webm" type="video/webm"> -->
+										</video>
+									</div>
+								</div>
+							</div>
+							<!-- End page header image -->
 
 							<!-- Begin page header caption
 							=============================== 
 							Use class "max-width-*" to set caption max width if needed. For example "max-width-1000". More info about helper classes can be found in the file "helper.css".
 							-->
 							<div class="ph-caption">
-								<h1 class="ph-caption-title ph-appear">Portfolio</h1>
-								<div class="ph-caption-title-ghost ph-appear">Portfolio</div>
-								<div class="ph-caption-subtitle ph-appear">My latest projects</div>
+								<div class="ph-categories ph-appear">
+									<div class="ph-category" style="">&nbsp;&nbsp;Cyber Security</div>
+									<!-- <div class="ph-category">Varia</div> -->
+								</div> <!-- /.ph-categories -->
+
+								<h2 class="ph-caption-title ph-appear">Image Steganography System</h2> <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
+								<!-- <h4 class="ph-caption-subtitle ph-appear">Subtitle</h4> -->
 							</div> 
 							<!-- End page header caption -->
+
+							<!-- Begin project info list
+							============================= 
+							* You can use the project info list as a standalone element outside of the page header if you want.
+							* Class "ph-appear" is for page header only!
+							-->
+							<div class="project-info-list">
+								<ul>
+									<li>
+										<div class="pi-list-heading">Porject</div>
+										<div class="pi-list-cont">Academic</div>
+									</li>
+									<li>
+										<div class="pi-list-heading">Year</div>
+										<div class="pi-list-cont">2023</div>
+									</li>
+									<li>
+										<div class="pi-list-heading">Type</div>
+										<div class="pi-list-cont">Cyber Security</div> <!-- Describe in a few words -->
+									</li>
+									<li>
+										<div class="pi-list-heading">Post</div>
+										<div class="pi-list-cont"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7071787841902534656/" target="_blank" rel="noopener">See more<span class="pi-list-icon"><i class="fas fa-arrow-right"></i></span></a></div>
+									</li>
+								</ul>
+							</div>
+							<!-- End project info list -->
 
 						</div> <!-- /.page-header-inner -->
 
@@ -268,6 +326,38 @@
 							</div>
 						</div>
 						<!-- End made with love -->
+
+						<!-- Begin page header share (share buttons are for design purposes only!) 
+						============================= -->
+						<div class="ph-share">
+							<div class="ph-share-trigger ph-appear">
+								<div class="ph-share-text">Share</div>
+								<div class="ph-share-icon magnetic-item"><i class="fas fa-share-alt"></i></div>
+							</div> <!-- /.ph-share-trigger -->
+
+							<div class="ph-share-content">
+								<div class="ph-share-close cursor-close"><div class="bg-noise"></div></div>
+								<div class="ph-share-inner">
+									<h1 class="ph-share-title ph-share-appear">Spread the Word!</h1>
+									<div class="ph-share-subtitle ph-share-appear">Share this project with your friends</div>
+
+									<div class="social-buttons ph-share-appear">
+										<ul>
+											<li><a href="https://www.facebook.com/sharer/sharer.php?u=rayenfares.github.io/single-project-stega.html" class="magnetic-item" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#0" class="magnetic-item" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="#0" class="magnetic-item" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
+										</ul>
+									</div> <!-- /.social-buttons -->
+
+									<!-- This close is for mobile devices -->
+									<div class="ph-share-m-close ph-share-appear">Close <i class="fas fa-times"></i></div>
+
+								</div> <!-- /.ph-share-inner -->
+								
+								<div class="ph-share-ghost ph-share-appear">Share</div>
+							</div> <!-- /.ph-share-content -->
+						</div>
+						<!-- End page header share -->
 						
 					</div>
 					<!-- End page header -->
@@ -278,22 +368,145 @@
 					************************************** -->
 					<div id="page-content">
 
+
 						<!-- =======================
 						///// Begin tt-section /////
 						============================ 
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
-						<div class="tt-section">
+						<div class="tt-section padding-top-xlg-180 padding-left-sm-3-p padding-right-sm-3-p">
+							<div class="tt-section-inner tt-wrap">
+
+								<div class="tt-row">
+									<div class="tt-col-lg-8">
+
+										<!-- Begin tt-Heading 
+										====================== 
+										* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
+										* Use class "tt-heading-stroke" to enable stroke style.
+										* Use class "tt-heading-center" to align tt-Heading to center.
+										* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+										-->
+										<div class="tt-heading tt-heading-xsm anim-fadeinup">
+											<h2 class="tt-heading-title">About</h2>
+											<!-- <h3 class="tt-heading-subtitle text-gray">Subtitle</h3> -->
+										</div>
+										<!-- End tt-Heading -->
+
+										<div class="anim-fadeinup text-gray">
+											<p>Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do.</p>
+
+											<!-- <div class="tt-btn tt-btn-link no-margin">
+												<a href="dummy-page.html" data-hover="Explore More">Explore More</a>
+											</div> -->
+										</div>
+
+									</div> <!-- /.tt-col -->
+
+									<div class="tt-col-lg-4">
+									</div> <!-- /.tt-col -->
+								</div> <!-- /.tt-row -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+						<!-- End tt-section -->
+
+
+						<!-- =======================
+						///// Begin tt-section /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+						<div class="tt-section padding-bottom-lg-150">
 							<div class="tt-section-inner">
 
-								<!-- Begin portfolio grid (works combined with tt-Ggrid!)
-								========================== 
-								* Use class "pgi-hover" to enable portfolio grid item hover effect (behavior depends on "ttgr-gap-*" classes below!).
-								* Use class "pgi-cap-hover" to enable portfolio grid item caption hover effect (effect only with class "pgi-cap-inside"! Also no effect on mobile devices!).
-								* Use class "pgi-cap-center" to position portfolio grid item caption to center.
-								* Use class "pgi-cap-inside" to position portfolio grid item caption to inside.
+								<!-- Begin tt-image
+								====================
+								* Use class "tti-fixed-height" to enable image fixed height (no effect on small screens!).
+								* Use class "anim-image-parallax" on <img> tag to enable parallax effect.
+								* Use class "margin-bottom-*" to enable bottom margins. For example "margin-bottom-100". More info about helper classes can be found in the file "helper.css".
+								-->
+								<div class="tt-image lightgallery tti-fixed-height">
+									<a href="" class="lg-trigger" data-cursor="Play" data-html="
+										<video class='lg-video-object lg-html5' controls playsinline preload='auto'>
+											<source src='assets/vids/fashion-week.mp4' type='video/mp4'>
+											<source src='assets/vids/fashion-week.webm' type='video/webm'>
+										</video>">
+
+										<figure class="cover-opacity-2">
+											<img class="anim-image-parallax tt-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/single-project/project-3/project-3-1.jpg" alt="image">
+											<!-- <figcaption>
+												Image Caption
+											</figcaption> -->
+										</figure>
+
+										<!-- Play button for mobile devices only -->
+										<div class="align-center z-index-2 hide-to-mobile">
+											<div class="tt-btn tt-btn-light tt-btn-round anim-fadeinup">
+												<div data-hover="Play">Play</div> <!-- Use short text only! -->
+											</div>
+										</div>
+									</a>
+								</div>
+								<!-- End tt-image -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+						<!-- End tt-section -->
+
+
+						<!-- =======================
+						///// Begin tt-section /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+						<div class="tt-section padding-left-sm-3-p padding-right-sm-3-p">
+							<div class="tt-section-inner tt-wrap">
+
+									<div class="tt-row">
+										<div class="tt-col-lg-4">
+										</div> <!-- /.tt-col -->
+
+										<div class="tt-col-lg-8">
+
+											<!-- Begin tt-Heading 
+											====================== 
+											* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
+											* Use class "tt-heading-stroke" to enable stroke style.
+											* Use class "tt-heading-center" to align tt-Heading to center.
+											* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+											-->
+											<div class="tt-heading tt-heading-xsm anim-fadeinup">
+												<h2 class="tt-heading-title">The Mission</h2>
+												<!-- <h3 class="tt-heading-subtitle text-gray">Subtitle</h3> -->
+											</div>
+											<!-- End tt-Heading -->
+
+											<div class="anim-fadeinup text-gray">
+												<p>Cause dried no solid no an small so still widen. Ten weather evident smiling bed against she examine its. Rendered far opinions two yet moderate sex striking. Sufficient motionless compliment by stimulated assistance at. Convinced resolving extensive agreeable in it on as remainder. Cordially say affection met who propriety him.</p>
+											</div>
+
+										</div> <!-- /.tt-col -->
+									</div> <!-- /.tt-row -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+						<!-- End tt-section -->
+
+
+						<!-- =======================
+						///// Begin tt-section /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+						<div class="tt-section no-padding-bottom">
+							<div class="tt-section-inner tt-wrap max-width-1600">
+
+								<!-- Begin tt-Gallery (works combined with tt-Ggrid!)
+								======================
+								* Use class "ttga-hover" to enable gallery item hover effect (behavior depends on "ttgr-gap-*" classes below).
 								--> 
-								<div id="portfolio-grid" class="pgi-cap-inside pgi-cap-hover">
+								<div class="tt-gallery ttga-hover">
 
 									<!-- Begin tt-Grid
 									=================== 
@@ -305,95 +518,29 @@
 									* Use class "ttgr-not-cropped" to enable not cropped mode (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
 									* Use class "ttgr-shifted" to enable shifted layout (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
 									-->
-									<div class="tt-grid ttgr-layout-1-2 ttgr-gap-4">
-
-										<!-- Begin tt-Ggrid top content 
-										================================ -->
-										<div class="tt-grid-top">
-
-											<!-- Begin tt-Ggrid categories/filter
-											====================================== -->
-											<div class="tt-grid-categories">
-
-												<!-- Begin tt-Ggrid categories trigger 
-												======================================= 
-												* Use class "ttgr-cat-fixed" to enable categories trigger fixed position.
-												-->
-												<div class="ttgr-cat-trigger-wrap ttgr-cat-fixed">
-													<a href="#portfolio-grid" class="ttgr-cat-trigger not-hide-cursor" data-offset="150">
-														<div class="ttgr-cat-text">
-															<span data-hover="Open">Filter</span>
-														</div>
-														<div class="ttgr-cat-icon">
-															<span class="magnetic-item"><i class="fas fa-layer-group"></i></span>
-														</div>
-													</a>
-												</div>
-												<!-- End tt-Ggrid categories trigger -->
-
-												<!-- Begin tt-Ggrid categories nav 
-												=================================== -->
-												<div class="ttgr-cat-nav">
-													<div class="ttgr-cat-list-holder cursor-close">
-														<div class="ttgr-cat-list-inner">
-															<div class="ttgr-cat-list-content">
-																<ul class="ttgr-cat-list">
-																	<li class="ttgr-cat-close">Close <i class="fas fa-times"></i></li> <!-- For mobile devices! -->
-																	<li class="ttgr-cat-item"><a href="#" class="active">Show All</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".BusinessIntelligence">BusinessIntelligence</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".MachineLearning">MachineLearning</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".ProjectManagement">ProjectManagement</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".CyberSecurity">CyberSecurity</a></li>
-																</ul>
-															</div> <!-- /.ttgr-cat-links-content -->
-														</div> <!-- /.ttgr-cat-links-inner -->
-													</div> <!-- /.ttgr-cat-links-holder -->
-												</div>
-												<!-- End tt-Ggrid categories nav -->
-
-											</div>
-											<!-- End tt-Ggrid categories/filter-->
-
-										</div>
-										<!-- End tt-Grid top content -->
-
+									<div class="tt-grid ttgr-layout-3 ttgr-not-cropped ttgr-shifted ttgr-gap-4">
 
 										<!-- Begin tt-Grid items wrap 
 										============================== -->
-										<div class="tt-grid-items-wrap isotope-items-wrap">
+										<div class="tt-grid-items-wrap isotope-items-wrap lightgallery">
 
 											<!-- Begin tt-Grid item
 											======================== -->
-											<div class="tt-grid-item isotope-item BusinessIntelligence">
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"! Also no effect on small screens!).
-													-->
-													<div class="portfolio-grid-item">
-														<a href="single-project-1.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="assets/img/portfolio/portfolio-1.jpg" alt="image">
-																	</figure> <!-- /.pgi-image -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">AMA Insights</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">BusinessIntelligence</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
+													<!-- Begin tt-Gallery item
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-2.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-2.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
 												</div> <!-- /.ttgr-item-inner -->
 											</div>
@@ -401,36 +548,21 @@
 
 											<!-- Begin tt-Grid item
 											======================== -->
-											<div class="tt-grid-item isotope-item MachineLearning">
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													-->
-													<div class="portfolio-grid-item">
-														<a href="single-project-2.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="assets/vids/timesnap.jpg" alt="image">
-																	</figure> <!-- /.pgi-image -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">TimeSnap</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">MachineLearning</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
+													<!-- Begin tt-Gallery item
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-3.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-3.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
 												</div> <!-- /.ttgr-item-inner -->
 											</div>
@@ -438,190 +570,100 @@
 
 											<!-- Begin tt-Grid item
 											======================== -->
-											<div class="tt-grid-item isotope-item CyberSecurity">
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													-->
-													<div class="portfolio-grid-item">
-														<a href="single-project-3.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-video-wrap ttgr-height">
-																		<video class="pgi-video" loop muted preload="metadata" poster="assets/vids/stegax.jpg">
-																			<!--<source src="assets/vids/fashion-week.mp4" type="video/mp4"> -->
-																			<!-- <source src="assets/vids/fashion-week.webm" type="video/webm"> -->
-																		</video>
-																	</figure> <!-- /.pgi-video-wrap -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">StegaX</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">CyberSecurity</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
+													<!-- Begin tt-Gallery item 
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-4.jpg" class="tt-gallery-item lg-trigger" data-cursor="View" data-sub-html="Yes, you can use image captions. :)">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-4.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
 												</div> <!-- /.ttgr-item-inner -->
 											</div>
 											<!-- End tt-Grid item -->
 
 											<!-- Begin tt-Grid item
-											
-												NEWW PROJECT TO ADD
-											
-											<div class="tt-grid-item isotope-item nature">
+											======================== -->
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													
-													<div class="portfolio-grid-item">
-														<a href="single-project-4.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". 
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="assets/img/portfolio/portfolio-3.jpg" alt="image">
-																	</figure>
-																</div> 
-															</div> 
-														</a> 
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">Mystery Forest</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">Information Technology</div>
-																</div> 
-															</div> 
-														</div> 
-													</div>
-													======================== -->
-													<!-- End portfolio grid item -->
+													<!-- Begin tt-Gallery item 
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-5.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-5.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
 												</div> <!-- /.ttgr-item-inner -->
 											</div>
 											<!-- End tt-Grid item -->
 
 											<!-- Begin tt-Grid item
-											
-												NEWW PROJECT TO ADD
-												
-											
-											<div class="tt-grid-item isotope-item branding">
+											======================== -->
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													
-													<div class="portfolio-grid-item">
-														<a href="single-project-5.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="assets/img/portfolio/portfolio-4.jpg" alt="image">
-																	</figure> 
-																</div> 
-															</div> 
-														</a> 
+													<!-- Begin tt-Gallery item 
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-6.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-6.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">Red Package</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">Branding</div>
-																	
-																</div> 
-															</div> 
-														</div> 
-													</div>
-													<
-
-												</div> 
+												</div> <!-- /.ttgr-item-inner -->
 											</div>
-											======================== -->
 											<!-- End tt-Grid item -->
-
 
 											<!-- Begin tt-Grid item
-											
-											+++++++ NEWW PROJECT TO ADD ++++++++++++
-											
-											
-											<div class="tt-grid-item isotope-item BusinessIntelligence">
+											======================== -->
+											<div class="tt-grid-item isotope-item">
 												<div class="ttgr-item-inner">
 
-													<!-- Begin portfolio grid item 
-													===============================
-													
-													<div class="portfolio-grid-item">
-														<a href="single-project-6.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-															
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="assets/img/portfolio/portfolio-5.jpg" alt="image">
-																	</figure> 
-																</div> 
-															</div> 
-														</a> 
+													<!-- Begin tt-Gallery item 
+													=========================== -->
+													<a href="assets/img/portfolio/single-project/project-3/project-3-7.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+														<div class="tt-gallery-item-inner">
+															<div class="tt-gallery-image-wrap anim-zoomin">
+																<figure class="tt-gallery-image ttgr-height">
+																	<img src="assets/img/portfolio/single-project/project-3/project-3-7.jpg" alt="image">
+																</figure> <!-- /.tt-gallery-image -->
+															</div> <!-- /.tt-gallery-image-wrap -->
+														</div> <!-- /.tt-gallery-item-inner -->
+													</a>
+													<!-- End tt-Gallery item -->
 
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">Studio Shoot</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">BusinessIntelligence</div>
-																</div> 
-															</div> 
-														</div> 
-													</div>
-													
-
-												</div> 
+												</div> <!-- /.ttgr-item-inner -->
 											</div>
-											======================== -->
 											<!-- End tt-Grid item -->
+
+										</div>
+										<!-- End tt-Grid items wrap  -->
 
 									</div>
 									<!-- End tt-Grid -->
 
 								</div>
-								<!-- End portfolio grid -->
-
-
-								<!-- Begin tt-pagination (uncomment below code if you want to use pagination)
-								========================= 
-								* Use class "tt-pagin-center" to align center.
-								-->
-								<!-- <div class="tt-pagination tt-pagin-center anim-fadeinup">
-									<div class="tt-pagin-prev">
-										<a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>
-									</div>
-									<div class="tt-pagin-numbers">
-										<a href="#0" class="tt-pagin-item magnetic-item active">1</a>
-										<a href="" class="tt-pagin-item magnetic-item">2</a>
-										<a href="" class="tt-pagin-item magnetic-item">3</a>
-										<a href="" class="tt-pagin-item magnetic-item">4</a>
-									</div>
-									<div class="tt-pagin-next">
-										<a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div> -->
-								<!-- End tt-pagination -->
+								<!-- End tt-Gallery -->
 
 							</div> <!-- /.tt-section-inner -->
 						</div>
@@ -642,16 +684,16 @@
 								* Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
 								-->
 								<div class="tt-page-nav tt-pn-scroll">
-									<a href="contact.html" class="tt-pn-link anim-fadeinup">
-										<div class="tt-pn-title">Let's talk</div>
-										<div class="tt-pn-hover-title">Let's talk</div>
+									<a href="single-project-4.html" class="tt-pn-link anim-fadeinup">
+										<div class="tt-pn-title">Next Project</div>
+										<div class="tt-pn-hover-title">Mystery Forest</div>
 									</a> <!-- /.tt-pn-link -->
 
-									<div class="tt-pn-subtitle anim-fadeinup">Get in Touch</div>
+									<div class="tt-pn-subtitle anim-fadeinup">Explore More</div>
 
 									<!-- Use if destination page contains page header image -->
 									<div class="tt-pn-image">
-										<img src="assets/img/page-header/ph-3.jpg" alt="image">
+										<img src="assets/img/portfolio/portfolio-3.jpg" alt="image">
 									</div>
 								</div>
 								<!-- End page nav -->
@@ -663,7 +705,7 @@
 
 					</div>
 					<!-- End page content -->
-					
+
 
 					<!-- ======================
 					///// Begin tt-footer /////
