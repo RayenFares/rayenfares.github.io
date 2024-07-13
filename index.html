@@ -51,6 +51,50 @@
 	-->
 	<body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
+		<!-- Audio Element -->
+    	<audio id="background-music" src="assets/audio/Zmegri.mp3" preload="auto"></audio>
+		<!-- Play Button-->
+    	<button id="play-button" onclick="playMusic()">Play Music</button>
+		<!-- JavaScript to Play Music -->
+			<script>
+				let isPlaying = false;
+				const audioElement = document.getElementById('background-music');
+				const playButton = document.getElementById('play-button');
+
+				function playMusic() {
+					if (!isPlaying) {
+						audioElement.play().then(() => {
+							isPlaying = true;
+						}).catch(error => {
+							console.log('Auto-play prevented:', error);
+						});
+					}
+				}
+
+				function handleInteraction() {
+					if (!isPlaying) {
+						playMusic();
+						document.removeEventListener('scroll', handleInteraction);
+						document.removeEventListener('click', handleInteraction);
+					}
+				}
+
+				window.addEventListener('scroll', handleInteraction);
+				window.addEventListener('click', handleInteraction);
+
+				document.addEventListener('DOMContentLoaded', function() {
+					const playPromise = audioElement.play();
+
+					if (playPromise !== undefined) {
+						playPromise.then(() => {
+							// Automatic playback started!
+						}).catch(error => {
+							console.log('Auto-play prevented:', error);
+							playButton.style.display = 'block'; // Show button if auto-play is prevented
+						});
+					}
+				});
+			</script>
 
 		<!-- *************************************
 		*********** Begin body inner ************* 
